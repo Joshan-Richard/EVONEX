@@ -6,7 +6,7 @@ export function initializeUI(currentUser) {
     const sidebarOverlay = document.getElementById('sidebar-overlay');
 
     if (burgerMenu && sidebar && sidebarOverlay) {
-        // --- FIX: Use a clear class 'is-open' to toggle visibility ---
+        // Use a clear class 'is-open' to toggle visibility
         burgerMenu.addEventListener('click', () => {
             sidebar.classList.toggle('is-open');
             sidebarOverlay.classList.toggle('active');
