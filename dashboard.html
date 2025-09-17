@@ -1,0 +1,61 @@
+<!-- dashboard.html -->
+
+<div class="dashboard-container">
+    <!-- Welcome Card -->
+    <div class="card welcome-card">
+        <h1 id="welcome-message">Welcome back!</h1>
+        <p>Let's continue making an impact. Your journey is just beginning.</p>
+    </div>
+
+    <!-- Progress Card -->
+    <div class="card progress-card">
+        <h3>Your Progress</h3>
+        <div class="progress-card-content">
+            <div class="level-display">
+                <span class="level-label">Level</span>
+                <strong id="user-level" class="level-number">1</strong>
+            </div>
+            <div class="exp-display">
+                <div class="exp-bar-container">
+                    <div id="user-exp-bar" class="exp-bar" style="width: 0%;"></div>
+                </div>
+                <span id="user-exp-text" class="exp-text">0 / 500 XP</span>
+            </div>
+            <button id="level-up-btn" class="btn btn-primary level-up-btn">View Quests</button>
+        </div>
+    </div>
+
+    <!-- Learning & Activity Cards -->
+    <div class="card-row">
+        <div class="card continue-learning-card">
+            <h3>Continue Learning</h3>
+            <div class="course-list">
+                <div class="course-item">
+                    <i class="fas fa-recycle course-icon"></i>
+                    <div class="course-details">
+                        <p>Intro to Recycling</p>
+                        <div class="course-progress-bar-container">
+                            <div class="course-progress-bar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <i class="fas fa-leaf course-icon"></i>
+                    <div class="course-details">
+                        <p>Understanding Biodiversity</p>
+                        <div class="course-progress-bar-container">
+                            <div class="course-progress-bar" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card activity-feed-card">
+            <h3><i class="fas fa-bolt"></i> Live Activity Feed</h3>
+            <ul id="activity-feed-list" class="activity-feed-list">
+                <!-- Activity items will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - EVONEX</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <div class="auth-header">
+            <img src="assets/logobg.png" alt="EVONEX Logo" class="auth-logo">
+            <h2>Create Your Account</h2>
+            <p>Join the EVONEX community!</p>
+        </div>
+
+        <form id="register-form" class="auth-form">
+            <div id="register-error-message" class="error-message"></div>
+            <!-- Role Selector -->
+            <div class="input-group">
+                <label for="role-select">I am a...</label>
+                <select id="role-select" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="ngo">NGO Member</option>
+                </select>
+            </div>
+
+            <!-- Common Fields -->
+            <div class="input-group">
+                <label for="register-name">Full Name</label>
+                <input type="text" id="register-name" name="fullname" required>
+            </div>
+            <div class="input-group">
+                <label for="register-email">Email</label>
+                <input type="email" id="register-email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" name="password" required>
+            </div>
+
+            <!-- Dynamic Fields Container -->
+            <div id="dynamic-fields">
+                <!-- Fields for Student/Teacher will be injected here by JS -->
+                <div id="school-field" class="input-group dynamic-field" style="display: none;">
+                    <label for="school-name">School Name</label>
+                    <input type="text" id="school-name" name="school">
+                </div>
+                
+                <!-- Fields for NGO will be injected here by JS -->
+                <div id="ngo-field" class="input-group dynamic-field" style="display: none;">
+                    <label for="ngo-name">Organization Name</label>
+                    <input type="text" id="ngo-name" name="organization">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Already have an account? <a href="login.html">Sign In</a></p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

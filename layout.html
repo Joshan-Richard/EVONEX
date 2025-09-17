@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVONEX Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="app-body">
+
+    <!-- The Vertical Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/logobg.png" alt="EVONEX Logo" class="sidebar-logo">
+            <h2 class="sidebar-title">EVONEX</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link active" data-page="dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a>
+            <a href="learn.html" class="nav-link" data-page="learn"><i class="fas fa-book-open"></i> <span>Courses</span></a>
+             <a href="quests.html" class="nav-link" data-page="quests"><i class="fas fa-fist-raised"></i> <span>Quests</span></a> 
+            <a href="#" class="nav-link" data-page="challenges"><i class="fas fa-trophy"></i> <span>Challenges</span></a>
+            <a href="#" class="nav-link" data-page="community"><i class="fas fa-users"></i> <span>Community Hub</span></a>
+            <a href="#" class="nav-link" data-page="leaderboard"><i class="fas fa-chart-bar"></i> <span>Leaderboard</span></a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="quote-box">
+                <p id="quote-text" class="quote-text"></p>
+                <p id="quote-author" class="quote-author"></p>
+            </div>
+        </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <!-- The Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- The Top Header -->
+        <header class="app-header">
+            <div class="header-left">
+                <button class="burger-menu" id="burger-menu"><i class="fas fa-bars"></i></button>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for courses...">
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="scan.html" class="header-icon" aria-label="Scanner"><i class="fas fa-qrcode"></i></a>
+                <button class="header-icon" aria-label="Settings"><i class="fas fa-cog"></i></button>
+                <div class="user-stats">
+                    <span id="user-badge" class="badge" title="Current Badge"></span>
+                    <span id="user-score" class="score" title="Total Score"></span>
+                </div>
+                <div class="profile-dropdown">
+                    <img src="assets/logobg.png" alt="Profile" id="profile-avatar" class="profile-avatar">
+                    <div class="dropdown-content">
+                        <a href="#" id="profile-link">My Profile</a>
+                        <a href="#" id="logout-button">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area - This is where dashboard.html will be loaded -->
+        <main class="main-content" id="main-content">
+            <!-- Content from dashboard.html will be dynamically loaded here -->
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+     <script type="module" src="js/app.js"></script>
+</body>
+</html>
